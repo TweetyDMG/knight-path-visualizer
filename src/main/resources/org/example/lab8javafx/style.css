@@ -1,0 +1,144 @@
+/* Стили для корневого VBox (вся форма) */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #e8e8e8, #d0d0d0); /* Градиент фона */
+    -fx-background-radius: 15; /* Закругление всей формы */
+    -fx-border-radius: 15;
+    -fx-border-color: #a0a0a0;
+    -fx-border-width: 1;
+}
+
+/* Стили для кнопок */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #d8d8d8, #b8b8b8); /* Градиент кнопок */
+    -fx-text-fill: #1a1a1a; /* Почти черный текст */
+    -fx-font-size: 14px;
+    -fx-padding: 6 12 6 12;
+    -fx-background-radius: 8; /* Более мягкие углы */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 2); /* Легкая тень */
+}
+
+/* Кнопка при наведении */
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #c0c0c0, #a0a0a0);
+}
+
+/* Стили для спиннеров */
+.spinner {
+    -fx-background-color: #f8f8f8;
+    -fx-border-color: #b0b0b0;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+}
+
+/* Стили для меток */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2a2a2a; /* Темно-серый текст */
+    -fx-font-weight: bold; /* Жирный шрифт для акцента */
+}
+
+/* Панель управления */
+.controls-pane {
+    -fx-background-color: linear-gradient(to bottom, #d0d0d0, #b8b8b8);
+    -fx-background-radius: 10;
+    -fx-border-color: #a0a0a0;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 0, 2);
+}
+
+/* Стили для AnchorPane (контейнер доски) */
+#boardContainer {
+    -fx-background-color: #e8e8e8;
+    -fx-background-radius: 10;
+    -fx-border-color: #b0b0b0;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+}
+
+/* Светлые клетки */
+.light-cell {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #d0d0d0;
+    -fx-border-width: 1;
+}
+
+/* Темные клетки */
+.dark-cell {
+    -fx-background-color: #707070;
+    -fx-border-color: #505050;
+    -fx-border-width: 1;
+}
+
+/* Стена */
+.wall-cell {
+    -fx-background-color: #1a1a1a; /* Почти черный */
+}
+
+/* Достижимые клетки */
+.reachable-cell-depth-0 {
+    -fx-background-color: rgba(180, 180, 180, 0.5); /* Светло-серый для глубины 0 */
+}
+.reachable-cell-depth-1 {
+    -fx-background-color: rgba(120, 120, 120, 0.5); /* Средний серый */
+}
+.reachable-cell-depth-2 {
+    -fx-background-color: rgba(60, 60, 60, 0.5); /* Темно-серый */
+}
+
+/* Стили для кнопок управления окном */
+.window-button {
+    -fx-background-color: #1a1a1a; /* Черный фон */
+    -fx-text-fill: #ffffff; /* Белый текст */
+    -fx-font-size: 12px;
+    -fx-pref-width: 20px;
+    -fx-pref-height: 20px;
+    -fx-background-radius: 10; /* Круглые кнопки */
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
+
+.window-button:hover {
+    -fx-background-color: #404040; /* Темно-серый при наведении */
+}
+
+.path-cell {
+    -fx-background-color: #FFD700; /* Золотой цвет для подсветки пути */
+}
+
+/* Дополнительно: Стилизация ListView в окне ходов */
+.root .list-view {
+    -fx-background-color: transparent; /* Убрать стандартный фон списка */
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px; /* Небольшое скругление */
+    -fx-background-insets: 0;
+    -fx-padding: 1px; /* Небольшой отступ, чтобы рамка была видна */
+}
+
+/* Дополнительно: Стилизация ячеек списка */
+.root .list-cell {
+    -fx-background-color: transparent; /* Прозрачный фон ячейки */
+    -fx-text-fill: #333333; /* Цвет текста */
+    -fx-padding: 5px 10px; /* Отступы внутри ячейки */
+    -fx-font-size: 13px;
+}
+
+/* Ячейка при наведении */
+.root .list-cell:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.1); /* Легкая подсветка */
+}
+
+/* Выбранная ячейка */
+.root .list-cell:filled:selected {
+    -fx-background-color: #a0c4ff; /* Синеватая подсветка выбранного */
+    -fx-text-fill: black;
+}
+
+/* Можно добавить стиль для посещенной стены, если нужно */
+.visited-cell.wall-cell {
+    -fx-background-color: #303030; /* Чуть светлее черного */
+    /* Можно добавить эффект, например, текстуру или обводку */
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+}
